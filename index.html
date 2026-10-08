@@ -3,384 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS Basics</title>
-
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    .sticky-header {
-      position: sticky;
-      top: 0;
-      background-color: black;
-      color: white;
-      padding: 15px;
-      text-align: center;
-      z-index: 100;
-    }
-
-    .flex-nav {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      background-color: #333;
-      padding: 15px;
-      margin-bottom: 30px;
-    }
-
-    .flex-nav a {
-      color: white;
-      text-decoration: none;
-      padding: 10px 20px;
-    }
-
-    .flex-nav a:hover {
-      background-color: #555;
-    }
-
-    section {
-      padding: 30px;
-      margin-bottom: 30px;
-    }
-
-    .text-style {
-      color: blue;
-      font-size: 18px;
-      font-family: Arial;
-    }
-
-    .highlight {
-      background-color: yellow;
-    }
-
-    .box {
-      width: 200px;
-      padding: 10px;
-      border: 2px solid black;
-      margin: 20px;
-    }
-
-    .hex {
-      color: #ff5733;
-    }
-
-    .rgb {
-      color: rgb(0, 128, 255);
-    }
-
-    .hsl {
-      color: hsl(120, 60%, 40%);
-    }
-
-    .nav-link:hover {
-      color: red;
-    }
-
-    .back-to-top {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      background-color: black;
-      color: white;
-      padding: 10px 15px;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    .profile-card {
-      width: 250px;
-      margin: 20px auto;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      text-align: center;
-    }
-
-    .grid-layout {
-      display: grid;
-      grid-template-columns: 30% 70%;
-    }
-
-    .grid-sidebar {
-      background-color: lightgray;
-      padding: 20px;
-    }
-
-    .grid-main {
-      background-color: lightblue;
-      padding: 20px;
-    }
-
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .gallery img {
-      width: calc(25% - 10px);
-      height: 150px;
-      object-fit: cover;
-    }
-
-    .animated-button {
-      background-color: blue;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.5s;
-    }
-
-    .animated-button:hover {
-      background-color: red;
-    }
-
-    .landing-page {
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      grid-template-rows: auto 1fr auto;
-      min-height: 400px;
-    }
-
-    .landing-header {
-      grid-column: 1 / 3;
-      background-color: lightblue;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .sidebar {
-      background-color: lightgray;
-      padding: 20px;
-    }
-
-    .main-content {
-      padding: 20px;
-    }
-
-    .landing-footer {
-      grid-column: 1 / 3;
-      background-color: #333;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .cards {
-      display: flex;
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .card {
-      flex: 1;
-      border: 1px solid black;
-      padding: 20px;
-      text-align: center;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 24px;
-      }
-
-      h2 {
-        font-size: 20px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .gallery img {
-        width: calc(50% - 10px);
-      }
-
-      .cards {
-        flex-direction: column;
-      }
-
-      .landing-page {
-        grid-template-columns: 1fr;
-      }
-
-      .landing-header,
-      .landing-footer {
-        grid-column: 1;
-      }
-
-      .flex-nav {
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
-  </style>
+  <meta name="description" content="Radomir Konovalov's Week 3 CSS Basics practice with 15 exercises.">
+  <title>Week 3 — CSS Basics Practice</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
-  <header class="sticky-header">
-    CSS Basics - 15 Assignments
-  </header>
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <h1>Week 3 — CSS Basics Practice</h1>
+    <p>Student: Radomir Konovalov</p>
+  </div>
+</header>
 
-  <h1 id="top">CSS Basics</h1>
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="#beginner">Beginner</a>
+    <a href="#intermediate">Intermediate</a>
+    <a href="#challenging">Challenging</a>
+  </div>
+</nav>
 
-  <nav class="flex-nav">
-    <a href="#part1">Part 1: 1-5</a>
-    <a href="#part2">Part 2: 6-10</a>
-    <a href="#part3">Part 3: 11-15</a>
-  </nav>
-
-  <section id="part1">
-    <h2>Part 1: Assignments 1-5</h2>
-
-    <h3>1. Text Styling</h3>
-    <p class="text-style">
-      This paragraph is blue, 18px, and uses Arial font.
-    </p>
-
-    <h3>2. Class Selector</h3>
+<main id="main-content">
+  <section class="hero" aria-labelledby="welcome-heading">
+    <h2 id="welcome-heading">CSS Basics — 15 Exercises</h2>
     <p>
-      This is a <span class="highlight">highlighted word</span>.
+      This website presents my solutions to 15 CSS exercises organized into
+      Beginner, Intermediate, and Challenging categories.
     </p>
-
-    <h3>3. Box Model Basics</h3>
-    <div class="box">
-      This is a box with width 200px, padding 10px, a 2px black border, and margin 20px.
-    </div>
-
-    <h3>4. Colors</h3>
-    <p class="hex">This text uses HEX color.</p>
-    <p class="rgb">This text uses RGB color.</p>
-    <p class="hsl">This text uses HSL color.</p>
-
-    <h3>5. Link Hover Effect</h3>
-    <a href="#" class="nav-link">Home</a>
-  </section>
-
-  <section id="part2">
-    <h2>Part 2: Assignments 6-10</h2>
-
-    <h3>6. Positioning</h3>
     <p>
-      The Back to Top button is fixed at the bottom-right corner.
-    </p>
-
-    <h3>7. Profile Card</h3>
-    <div class="profile-card">
-      <h3>Radomir Konovalov</h3>
-      <p>Web Developer</p>
-      <p>Cybersecurity Student</p>
-    </div>
-
-    <h3>8. Flexbox Navigation</h3>
-    <nav class="flex-nav">
-      <a href="#part1">Part 1</a>
-      <a href="#part2">Part 2</a>
-      <a href="#part3">Part 3</a>
-    </nav>
-
-    <h3>9. Grid Layout</h3>
-    <div class="grid-layout">
-      <aside class="grid-sidebar">
-        <h3>Sidebar</h3>
-        <p>Menu</p>
-        <p>About</p>
-      </aside>
-
-      <main class="grid-main">
-        <h3>Main Content</h3>
-        <p>
-          This layout uses 30% for the sidebar and 70% for the main content.
-        </p>
-      </main>
-    </div>
-
-    <h3>10. Media Queries</h3>
-    <p>
-      Resize the browser below 600px to see the heading sizes change.
+      It demonstrates selectors, the box model, colors, positioning, Flexbox,
+      Grid, responsive design, accessibility, and CSS transitions.
     </p>
   </section>
 
-  <section id="part3">
-    <h2>Part 3: Assignments 11-15</h2>
-
-    <h3>11. Flexbox Gallery</h3>
-    <div class="gallery">
-      <img src="https://picsum.photos/300/200?random=1" alt="Gallery image 1">
-      <img src="https://picsum.photos/300/200?random=2" alt="Gallery image 2">
-      <img src="https://picsum.photos/300/200?random=3" alt="Gallery image 3">
-      <img src="https://picsum.photos/300/200?random=4" alt="Gallery image 4">
-      <img src="https://picsum.photos/300/200?random=5" alt="Gallery image 5">
-      <img src="https://picsum.photos/300/200?random=6" alt="Gallery image 6">
-      <img src="https://picsum.photos/300/200?random=7" alt="Gallery image 7">
-      <img src="https://picsum.photos/300/200?random=8" alt="Gallery image 8">
-    </div>
-
-    <h3>12. Sticky Header</h3>
-    <p>
-      Scroll the page to see the header stay at the top.
-    </p>
-
-    <h3>13. Animated Button</h3>
-    <button class="animated-button">
-      Hover Me
-    </button>
-
-    <h3>14. Grid-based Landing Page</h3>
-
-    <div class="landing-page">
-      <header class="landing-header">
-        Landing Page Header
-      </header>
-
-      <aside class="sidebar">
-        <h3>Sidebar</h3>
-        <p>Home</p>
-        <p>About</p>
-        <p>Contact</p>
-      </aside>
-
-      <main class="main-content">
-        <h2>Welcome!</h2>
-        <p>
-          This is the main content of the landing page.
-        </p>
-      </main>
-
-      <footer class="landing-footer">
-        Landing Page Footer
-      </footer>
-    </div>
-
-    <h3>15. Responsive Card Layout</h3>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Alisher</h3>
-        <p>Web Developer</p>
-      </div>
-
-      <div class="card">
-        <h3>Alym</h3>
-        <p>Designer</p>
-      </div>
-
-      <div class="card">
-        <h3>Radomir</h3>
-        <p>Security operation center</p>
-      </div>
+  <section id="beginner" aria-labelledby="beginner-heading">
+    <h2 id="beginner-heading">Beginner — Exercises 1–5</h2>
+    <div class="category-grid">
+      <article class="category-card">
+        <h3>Exercise 1</h3>
+        <p>Text Styling</p>
+        <a href="beginner/ex1.html">Open Exercise 1</a>
+      </article>
+      <article class="category-card">
+        <h3>Exercise 2</h3>
+        <p>Class Selector</p>
+        <a href="beginner/ex2.html">Open Exercise 2</a>
+      </article>
+      <article class="category-card">
+        <h3>Exercise 3</h3>
+        <p>Box Model Basics</p>
+        <a href="beginner/ex3.html">Open Exercise 3</a>
+      </article>
+      <article class="category-card">
+        <h3>Exercise 4</h3>
+        <p>Colors</p>
+        <a href="beginner/ex4.html">Open Exercise 4</a>
+      </article>
+      <article class="category-card">
+        <h3>Exercise 5</h3>
+        <p>Link Hover Effect</p>
+        <a href="beginner/ex5.html">Open Exercise 5</a>
+      </article>
     </div>
   </section>
 
-  <a href="#top" class="back-to-top">Back to Top</a>
+  <section id="intermediate" aria-labelledby="intermediate-heading">
+    <h2 id="intermediate-heading">Intermediate — Exercises 6–10</h2>
+    <div class="category-grid">
+      <article class="category-card">
+        <h3>Exercise 6</h3>
+        <p>Positioning</p>
+        <a href="intermediate/ex6.html">Open Exercise 6</a>
+      </article>
+      <article class="category-card">
+        <h3>Exercise 7</h3>
+        <p>Profile Card</p>
+        <a href="intermediate/ex7.html">Open Exercise 7</a>
+      </article>
+      <article class="category-card">
+        <h3>Exercise 8</h3>
+        <p>Flexbox Navigation</p>
+        <a href="intermediate/ex8.html">Open Exercise 8</a>
+      </article>
+      <article class="category-card">
+        <h3>Exercise 9</h3>
+        <p>Grid Layout</p>
+        <a href="intermediate/ex9.html">Open Exercise 9</a>
+      </article>
+      <article class="category-card">
+        <h3>Exercise 10</h3>
+        <p>Media Queries</p>
+        <a href="intermediate/ex10.html">Open Exercise 10</a>
+      </article>
+    </div>
+  </section>
 
+  <section id="challenging" aria-labelledby="challenging-heading">
+    <h2 id="challenging-heading">Challenging — Exercises 11–15</h2>
+    <div class="category-grid">
+      <article class="category-card">
+        <h3>Exercise 11</h3>
+        <p>Flexbox Gallery</p>
+        <a href="challenging/ex11.html">Open Exercise 11</a>
+      </article>
+      <article class="category-card">
+        <h3>Exercise 12</h3>
+        <p>Sticky Header</p>
+        <a href="challenging/ex12.html">Open Exercise 12</a>
+      </article>
+      <article class="category-card">
+        <h3>Exercise 13</h3>
+        <p>Animated Button</p>
+        <a href="challenging/ex13.html">Open Exercise 13</a>
+      </article>
+      <article class="category-card">
+        <h3>Exercise 14</h3>
+        <p>Grid-based Landing Page</p>
+        <a href="challenging/ex14.html">Open Exercise 14</a>
+      </article>
+      <article class="category-card">
+        <h3>Exercise 15</h3>
+        <p>Responsive Card Layout</p>
+        <a href="challenging/ex15.html">Open Exercise 15</a>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>Week 3 — CSS Basics Practice</p>
+  <p>Student: Radomir Konovalov</p>
+  <p>Web &amp; Internet Technologies</p>
+</footer>
 </body>
 </html>
-

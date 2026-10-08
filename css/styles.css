@@ -1,0 +1,523 @@
+/* =========================================================
+   Week 3 — CSS Basics Practice
+   Site-wide external stylesheet
+   ========================================================= */
+
+:root {
+  --bg: #f4f7fb;
+  --surface: #ffffff;
+  --surface-alt: #e8eef7;
+  --text: #172033;
+  --muted: #536174;
+  --primary: #174ea6;
+  --primary-dark: #103b80;
+  --accent: #b42318;
+  --border: #c7d0dd;
+  --code-bg: #172033;
+  --code-text: #f4f7fb;
+  --success: #176b3a;
+  --shadow: 0 4px 14px rgba(23, 32, 51, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--primary);
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #f5a623;
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -4rem;
+  z-index: 1000;
+  padding: 0.75rem 1rem;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.35rem;
+}
+
+.skip-link:focus {
+  top: 0.75rem;
+}
+
+.site-header {
+  background: #101828;
+  color: #fff;
+  padding: 1rem;
+}
+
+.header-inner {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+.site-header p {
+  margin: 0.25rem 0 0;
+  color: #e3e8f0;
+}
+
+.site-nav {
+  background: #1d2939;
+}
+
+.nav-inner {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+}
+
+.site-nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.55rem 0.8rem;
+  border-radius: 0.35rem;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  background: #344054;
+}
+
+main {
+  width: min(1100px, 92%);
+  margin: 2rem auto;
+}
+
+.hero,
+.content-card,
+.exercise-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.hero {
+  margin-bottom: 1.5rem;
+}
+
+.hero h2 {
+  margin-top: 0;
+}
+
+.category-grid,
+.exercise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.category-grid {
+  margin: 1rem 0 2rem;
+}
+
+.category-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+.category-card h3 {
+  margin-top: 0;
+}
+
+.exercise-list {
+  display: grid;
+  gap: 0.5rem;
+  padding-left: 1.25rem;
+}
+
+.exercise-list a {
+  font-weight: 700;
+}
+
+.exercise-card {
+  margin-bottom: 1.5rem;
+}
+
+.exercise-card h2 {
+  margin-top: 0;
+}
+
+.demo {
+  margin-top: 1rem;
+  padding: 1.25rem;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+}
+
+.demo-label {
+  margin-top: 0;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.code-box {
+  overflow-x: auto;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--code-bg);
+  color: var(--code-text);
+  border-radius: 0.5rem;
+}
+
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+code {
+  font-family: "Courier New", monospace;
+}
+
+.site-footer {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: #101828;
+  color: #fff;
+  text-align: center;
+}
+
+.site-footer a {
+  color: #fff;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+/* ---- Exercise 1: Text Styling ---- */
+.ex1-text {
+  color: blue;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ---- Exercise 2: Class Selector ---- */
+.highlight {
+  background-color: #fff3a3;
+  color: #111;
+  padding: 0.1rem 0.25rem;
+}
+
+/* ---- Exercise 3: Box Model ---- */
+.ex3-box {
+  width: 200px;
+  padding: 10px;
+  border: 2px solid #000;
+  margin: 20px;
+  background: #fff;
+}
+
+/* ---- Exercise 4: Colors ---- */
+.ex4-hex { color: #ff5733; }
+.ex4-rgb { color: rgb(0, 128, 255); }
+.ex4-hsl { color: hsl(120, 60%, 40%); }
+
+/* ---- Exercise 5: Link Hover ---- */
+.ex5-link {
+  font-weight: 700;
+}
+.ex5-link:hover {
+  color: red;
+}
+
+/* ---- Exercise 6: Fixed Position ---- */
+.ex6-area {
+  position: relative;
+  min-height: 180px;
+}
+.ex6-button {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 50;
+  background: #101828;
+  color: #fff;
+  padding: 0.7rem 1rem;
+  border-radius: 0.4rem;
+  text-decoration: none;
+}
+
+/* ---- Exercise 7: Profile Card ---- */
+.ex7-profile {
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ---- Exercise 8: Flexbox Navigation ---- */
+.ex8-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background: #1d2939;
+}
+.ex8-nav a {
+  flex: 1;
+  min-width: 100px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.65rem;
+  border-radius: 0.35rem;
+}
+.ex8-nav a:hover {
+  background: #475467;
+}
+
+/* ---- Exercise 9: Grid Layout ---- */
+.ex9-grid {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+.ex9-sidebar,
+.ex9-main {
+  padding: 1.25rem;
+}
+.ex9-sidebar { background: #d0d5dd; }
+.ex9-main { background: #cfe8ff; }
+
+/* ---- Exercise 10: Media Queries ---- */
+.ex10-title {
+  font-size: 2rem;
+}
+.ex10-note {
+  color: var(--muted);
+}
+
+/* ---- Exercise 11: Flexbox Gallery ---- */
+.ex11-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.ex11-gallery img {
+  width: calc(25% - 7.5px);
+  height: 150px;
+  object-fit: cover;
+  border-radius: 0.4rem;
+}
+
+/* ---- Exercise 12: Sticky Header ---- */
+.ex12-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 1rem;
+  background: #101828;
+  color: #fff;
+  text-align: center;
+}
+
+/* ---- Exercise 13: Animated Button ---- */
+.ex13-button {
+  background: #174ea6;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: background-color 0.5s, transform 0.2s;
+}
+.ex13-button:hover {
+  background: red;
+  transform: translateY(-2px);
+}
+
+/* ---- Exercise 14: Grid Landing Page ---- */
+.ex14-landing {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 350px;
+}
+.ex14-header,
+.ex14-footer {
+  grid-column: 1 / 3;
+  padding: 1.25rem;
+  text-align: center;
+}
+.ex14-header { background: #cfe8ff; }
+.ex14-sidebar { background: #d0d5dd; padding: 1.25rem; }
+.ex14-main { padding: 1.25rem; }
+.ex14-footer { background: #1d2939; color: #fff; }
+
+/* ---- Exercise 15: Responsive Cards ---- */
+.ex15-cards {
+  display: flex;
+  gap: 1rem;
+}
+.ex15-card {
+  flex: 1;
+  padding: 1.25rem;
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+}
+
+/* ---- Dark mode ---- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1220;
+    --surface: #111927;
+    --surface-alt: #1b2638;
+    --text: #eef2f6;
+    --muted: #b7c1ce;
+    --border: #344054;
+    --code-bg: #050a12;
+    --code-text: #f5f7fa;
+  }
+
+  .ex3-box {
+    background: #fff;
+    color: #111;
+  }
+
+  .ex9-sidebar,
+  .ex14-sidebar {
+    color: #111;
+  }
+
+  .ex9-main,
+  .ex14-header {
+    color: #111;
+  }
+}
+
+/* ---- Responsive layouts ---- */
+@media (max-width: 768px) {
+  .category-grid,
+  .exercise-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ex9-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ex11-gallery img {
+    width: calc(50% - 5px);
+  }
+
+  .ex14-landing {
+    grid-template-columns: 1fr;
+  }
+
+  .ex14-header,
+  .ex14-footer {
+    grid-column: 1;
+  }
+
+  .ex15-cards {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  main {
+    width: 94%;
+    margin: 1rem auto;
+  }
+
+  .site-header,
+  .site-footer {
+    padding: 1rem;
+  }
+
+  .nav-inner {
+    flex-direction: column;
+  }
+
+  .site-nav a {
+    display: block;
+  }
+
+  .ex8-nav {
+    flex-direction: column;
+  }
+
+  .ex8-nav a {
+    width: 100%;
+  }
+
+  .ex11-gallery img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .ex10-title {
+    font-size: 1.5rem;
+  }
+
+  .hero,
+  .content-card,
+  .exercise-card {
+    padding: 1rem;
+  }
+}
+
+/* ---- Exercise 12: Scrollable Sticky Demo ---- */
+.ex12-scroll {
+  height: 220px;
+  overflow: auto;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
