@@ -29,7 +29,7 @@ Open `index.html` in a web browser and navigate through all exercises.
 
 ## Live URL
 
-GitHub Pages URL: **Add your GitHub Pages URL here after publishing.**
+GitHub Pages URL: https://karkar1939.github.io/Css_base/ 
 
 ## Quality Assurance
 
